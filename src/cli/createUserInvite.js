@@ -11,6 +11,6 @@ You are currently in ${process.cwd()}`);
     return userName;
 
   } catch (err) {
-    console.log('');
+    console.log('Operation failed');
   }
 };
