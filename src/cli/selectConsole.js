@@ -16,7 +16,9 @@ export const selectConsole = async (commandLine) => {
     case 'compress':
       await commandList.compress(a[1], a[2]);
       break;
-
+    case  'decompress':
+      await commandList.decompress(a[1], a[2]);
+      break;
 
     default:
       console.log('No command');

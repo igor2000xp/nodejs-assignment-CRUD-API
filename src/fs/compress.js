@@ -9,5 +9,4 @@ export const compress = async (file, newFileName) => {
   inputStream.pipe(myZip).pipe(outputStream);
 };
 
-// get-platformio.py
 
