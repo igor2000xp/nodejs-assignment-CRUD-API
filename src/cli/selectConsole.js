@@ -13,6 +13,10 @@ export const selectConsole = async (commandLine) => {
     case 'hash':
       console.log(commandList.calculateHash(a[1]));
       break;
+    case 'compress':
+      await commandList.compress(a[1], a[2]);
+      break;
+
 
     default:
       console.log('No command');
