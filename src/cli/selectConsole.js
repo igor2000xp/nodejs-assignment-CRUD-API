@@ -31,6 +31,9 @@ export const selectConsole = async (commandLine) => {
     case 'cp':
       await commandList.copy(a[1], a[2]);
       break;
+    case 'mv':
+      await commandList.move(a[1], a[2]);
+      break;
 
     default:
       console.log('No command');
