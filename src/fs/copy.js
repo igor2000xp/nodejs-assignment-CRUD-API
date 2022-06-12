@@ -2,7 +2,7 @@ import * as fs from 'fs/promises';
 import { constants } from 'fs';
 import * as path from 'path';
 
-const ERROR_FS = 'FS operation failed';
+const ERROR_FS = 'Operation failed';
 
 export const copy = async (sourcePath, destPath) => {
   try {

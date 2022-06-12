@@ -1,5 +1,5 @@
 import * as fs from 'fs/promises';
-const ERROR_MASSAGE = 'FS operation failed';
+const ERROR_MASSAGE = 'Operation failed';
 
 export const remove = async (pathFile) => {
 

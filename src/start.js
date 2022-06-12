@@ -3,7 +3,7 @@ import * as os from 'os';
 import * as cli from './cli/index.js';
 
 const userName = await cli.createUserInvite(process.argv.slice(3));
-const ERROR_FS = 'FS operation failed';
+const ERROR_FS = 'Operation failed';
 
 const main = async () => {
   const rl = readline.createInterface({

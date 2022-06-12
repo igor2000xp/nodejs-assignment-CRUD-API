@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as process from "process";
 
-const ERROR_FS = 'FS operation failed';
+const ERROR_FS = 'Operation failed';
 
 export const catFile = async (fileName) => {
   return new Promise((res, rej) => {

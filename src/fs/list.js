@@ -1,5 +1,5 @@
 import * as fs from 'fs/promises';
-const ERROR_FS = 'FS operation failed';
+const ERROR_FS = 'Operation failed';
 
 export const list = async (path) => {
   try {

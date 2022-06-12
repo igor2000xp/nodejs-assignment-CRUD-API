@@ -1,7 +1,7 @@
 import { createReadStream } from 'fs';
 
 const { createHash } = await import('crypto');
-const ERROR_FS = 'FS operation failed';
+const ERROR_FS = 'Operation failed';
 
 export const calculateHash = (pathToFile) => {
   return new Promise((res, rej) => {

@@ -50,12 +50,7 @@ export const selectConsole = async (commandLine) => {
       break;
 
     default:
-      console.log('No command');
+      console.log('Invalid input');
       break;
   }
-
-  // function promptPrint() {
-  //   console.log(`You are currently in ${process.cwd() + os.EOL}`);
-  // }
-
 }
