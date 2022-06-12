@@ -8,9 +8,8 @@ export const calculateHash = (pathToFile) => {
     const hash = createHash('sha256');
     const input = createReadStream(pathToFile);
 
-    input.on('error', (err) => {
-      console.log(`${ERROR_FS} -- ${err}`);
-    })
+    input.on('error', (err) =>
+      rej(`${ERROR_FS} -- ${err}`));
 
     input.on('readable', () => {
       const data = input.read();

@@ -1,15 +1,22 @@
-import * as fs from 'fs/promises';
+import * as fs from 'fs';
+import * as process from "process";
 
 const ERROR_FS = 'FS operation failed';
 
 export const catFile = async (fileName) => {
+  return new Promise((res, rej) => {
 
-  try {
-    const readFile = await fs.readFile(fileName, 'utf-8');
-    console.log(readFile);
+      const myReadStream = fs.createReadStream(fileName);
 
-  } catch (err) {
-    // throw new Error(ERROR_FS);
-    console.log(`${err} + ${ERROR_FS}`);
-  }
+      res(myReadStream.pipe(process.stdout));
+
+      myReadStream.on('error', (err) => {
+        console.log(`${ERROR_FS} -- ${err}`);
+        rej(new Error(`${ERROR_FS} -- ${err}`));
+      });
+
+      myReadStream.on('end', () => {
+        console.log(' ');
+      });
+  })
 };
