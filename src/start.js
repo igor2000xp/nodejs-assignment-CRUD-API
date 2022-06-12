@@ -12,11 +12,12 @@ const main = async () => {
 
   rl.on('line', async (line) => {
     rl.setPrompt(`You are currently in ${process.cwd() + os.EOL}`);
-    rl.prompt();
+    // rl.prompt();
     if (line.trim() === '.exit') {
       rl.close();
     } else {
-      console.log(await cli.selectConsole(line));
+      // console.log(await cli.selectConsole(line));
+      await cli.selectConsole(line);
       // .then(() => console.log(`You are currently in ${process.cwd()}`));
       rl.prompt();
     }
