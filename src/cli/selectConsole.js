@@ -39,8 +39,8 @@ export const selectConsole = async (commandLine) => {
       break;
 
     case 'hash':
-      await console.log(await commandList.calculateHash(a[1]));
-      // await commandList.calcHash2(a[1]);
+      await console.log(await commandList.calculateHash(a[1]).catch((err) => console.log('ERR2' + err)));
+      // await commandList.calculateHash(a[1]);
       break;
 
     case 'compress':
