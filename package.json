@@ -17,12 +17,6 @@
   "bugs": {
     "url": "https://github.com/igor2000xp/nodejs-assignment-CRUD-API/issues"
   },
-  "homepage": "https://github.com/igor2000xp/nodejs-assignment-CRUD-API#readme",
-  "devDependencies": {
-    "webpack": "^5.73.0",
-    "webpack-cli": "^4.9.2"
-  },
-  "dependencies": {
-    "process": "^0.11.10"
-  }
+  "homepage": "https://github.com/igor2000xp/nodejs-assignment-CRUD-API#readme"
+
 }
