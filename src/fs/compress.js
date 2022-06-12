@@ -2,11 +2,16 @@ import * as fs from 'fs';
 import * as zlib from 'zlib';
 
 export const compress = async (file, newFileName) => {
-  const myZip = zlib.createBrotliCompress();
-  const inputStream = fs.createReadStream(file);
-  const outputStream = fs.createWriteStream(newFileName);
+  try {
+    const myZip = zlib.createBrotliCompress();
+    const inputStream = fs.createReadStream(file);
+    const outputStream = fs.createWriteStream(newFileName);
 
-  inputStream.pipe(myZip).pipe(outputStream);
+    inputStream.pipe(myZip).pipe(outputStream);
+
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 

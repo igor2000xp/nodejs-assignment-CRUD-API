@@ -19,6 +19,18 @@ export const selectConsole = async (commandLine) => {
     case  'decompress':
       await commandList.decompress(a[1], a[2]);
       break;
+    case 'cd':
+      commandList.myChdir(a[1]);
+      break;
+    case 'up':
+      commandList.myChdir('..');
+      break;
+    case 'rn':
+      await commandList.rename(a[1], a[2]);
+      break;
+    case 'cp':
+      await commandList.copy(a[1], a[2]);
+      break;
 
     default:
       console.log('No command');
