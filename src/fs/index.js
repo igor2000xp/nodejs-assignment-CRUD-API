@@ -7,3 +7,4 @@ export { myChdir } from './chdir.js';
 export { rename } from './rename.js';
 export { copy } from './copy.js';
 export { move } from './move.js';
+export { remove } from './remove.js';

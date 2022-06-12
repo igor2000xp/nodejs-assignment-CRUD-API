@@ -34,6 +34,9 @@ export const selectConsole = async (commandLine) => {
     case 'mv':
       await commandList.move(a[1], a[2]);
       break;
+    case 'rm':
+      await commandList.remove(a[1]);
+      break;
 
     default:
       console.log('No command');
