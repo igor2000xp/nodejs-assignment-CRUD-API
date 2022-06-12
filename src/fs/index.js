@@ -8,3 +8,4 @@ export { rename } from './rename.js';
 export { copy } from './copy.js';
 export { move } from './move.js';
 export { remove } from './remove.js';
+export { catFile } from './catFile.js';

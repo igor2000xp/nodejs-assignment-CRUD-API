@@ -37,6 +37,9 @@ export const selectConsole = async (commandLine) => {
     case 'rm':
       await commandList.remove(a[1]);
       break;
+    case 'cat':
+      await commandList.catFile(a[1]);
+      break;
 
     default:
       console.log('No command');
