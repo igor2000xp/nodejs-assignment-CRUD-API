@@ -40,6 +40,9 @@ export const selectConsole = async (commandLine) => {
     case 'cat':
       await commandList.catFile(a[1]);
       break;
+    case 'add':
+      await commandList.add(a[1]);
+      break;
 
     default:
       console.log('No command');
